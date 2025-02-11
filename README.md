@@ -1,90 +1,100 @@
-# Machine Learning Project Workbook 🤖
+# Data Technician Workbook: SQL Language 🚀📊
 
-**Author:** Your Name  
-**Project Date:** 02/11/2025  
+**Author:** Sergios Vasileiou  
+**Course Date:** 13/01/25  
 
-This repository documents every step of my Machine Learning project—from data acquisition, exploratory analysis, and model training to deployment. Each section provides context and insights into the process, and the use of emojis makes the document engaging and easy to navigate.
+This repository documents my practical exercises in SQL, covering database fundamentals, join types, real-world SQL query scenarios, and a detailed essay on designing a retail database. Explore the tasks below to learn about the essential concepts of SQL through hands-on examples and best practices. 🔍
 
 ## Table of Contents
-- [Data Collection & Preprocessing 📥](#data-collection--preprocessing)
-  - [Task 1: Data Acquisition 🌐](#task-1-data-acquisition)
-  - [Task 2: Data Cleaning & Preparation 🧹](#task-2-data-cleaning--preparation)
-- [Exploratory Data Analysis 🔍](#exploratory-data-analysis)
-  - [Task 3: Insight Discovery 📈](#task-3-insight-discovery)
-  - [Task 4: Visualizations & Reporting 🎨](#task-4-visualizations--reporting)
-- [Modeling & Evaluation 🤖](#modeling--evaluation)
-  - [Task 5: Model Building & Training 🚀](#task-5-model-building--training)
-  - [Task 6: Model Evaluation & Tuning ⚖️](#task-6-model-evaluation--tuning)
-- [Deployment & Results 📊](#deployment--results)
-  - [Task 7: Model Deployment & Monitoring 🌟](#task-7-model-deployment--monitoring)
-- [Project Notes & Resources 📝](#project-notes--resources)
+- [Day 1: Database Concepts & Fundamentals 📚](#day-1-database-concepts--fundamentals-)
+  - [Task 1: Key Database Concepts 🔑](#task-1-key-database-concepts-)
+  - [Task 2: Relational vs Non-relational Databases 💻](#task-2-relational-vs-non-relational-databases-)
+- [Day 3: SQL Joins & Query Techniques 🔗](#day-3-sql-joins--query-techniques-)
+- [Day 4: Database Design & Practical SQL Tasks 🛠](#day-4-database-design--practical-sql-tasks-)
+  - [Task 1: SQL Essay on Retail Database Design 📝](#task-1-sql-essay-on-retail-database-design-)
+  - [Task 2: SQL Practical Exercises 🎯](#task-2-sql-practical-exercises-)
+- [Course Notes & Additional Resources 📖](#course-notes--additional-resources-)
 
-## Data Collection & Preprocessing 📥
+## Day 1: Database Concepts & Fundamentals 📚
 
-### Task 1: Data Acquisition 🌐
-- **Objective:** Collect datasets from various sources including APIs, public repositories, and web scraping.
-- **Approach:**  
-  - Utilized multiple APIs to retrieve real-time data.
-  - Merged data from different sources for a comprehensive dataset.
-- **Outcome:** A robust and diverse dataset that lays the foundation for detailed analysis.
+### Task 1: Key Database Concepts 🔑
+In this task I explored essential SQL and database definitions:
+- **Primary Key:** A unique identifier for each record in a table; cannot be null. 🔒
+- **Secondary Key:** May contain duplicate values and can include nulls.
+- **Foreign Key:** A reference that links records in one table to a primary key in another, enforcing referential integrity.
+- **Relationship Examples:**  
+  - *One-to-One:* A trackID and its corresponding track name in a music dataset.  
+  - *One-to-Many:* A single doctor serving multiple patients in a hospital dataset.  
+  - *Many-to-Many:* Patients visiting various doctors where each doctor treats many patients.
 
-### Task 2: Data Cleaning & Preparation 🧹
-- **Objective:** Enhance data quality by cleaning and preprocessing the raw data.
-- **Methods:**  
-  - Removal of duplicates and management of missing values.
-  - Data normalization, transformation, and feature encoding.
-- **Outcome:** A refined dataset ready to be used for in-depth analysis and modeling.
+These foundational concepts are crucial for designing efficient databases and ensuring data integrity.
 
-## Exploratory Data Analysis 🔍
+### Task 2: Relational vs Non-relational Databases 💻
+This task compares the two major database models:
+- **Relational Databases:**  
+  - Organize data into tables with rows and columns and enforce a strict schema.  
+  - Support ACID properties for reliable transactions (e.g., MySQL, Oracle).  
+  - Ideal for applications requiring complex queries and data consistency.
+- **Non-relational Databases (NoSQL):**  
+  - Allow flexible data formats such as documents, key-value pairs, or graphs.  
+  - Emphasize scalability and high availability over strict consistency (e.g., MongoDB, Cassandra).  
+  - Suitable for unstructured, semi-structured, or big data scenarios.
 
-### Task 3: Insight Discovery 📈
-- **Objective:** Uncover underlying patterns, trends, and correlations within the dataset.
-- **Techniques:**  
-  - Statistical analysis including summary statistics and correlation matrices.
-  - Identifying key variables and potential outliers.
-- **Outcome:** Actionable insights that guide the feature engineering and model selection process.
+This section describes which data types benefit from non-relational models, such as unstructured social media posts or big data from real-time sensors.
 
-### Task 4: Visualizations & Reporting 🎨
-- **Objective:** Translate complex data insights into clear, compelling visualizations.
-- **Tools Used:**  
-  - Python visualization libraries (e.g., Matplotlib, Seaborn).
-  - Interactive dashboards for dynamic data exploration.
-- **Outcome:** A series of visual reports that effectively communicate the story behind the data.
+## Day 3: SQL Joins & Query Techniques 🔗
 
-## Modeling & Evaluation 🤖
+### Task 1: SQL Join Types and Examples
+Using the Sakila dataset, I explored various join types:
+- **Self-Join:** Join a table to itself to compare rows.  
+- **Right Join:** Returns all rows from the right table with matching left table rows (or NULL when unmatched).  
+- **Full Join:** Combines left and right joins to return all records when there is a match in either table.  
+- **Inner Join:** Retrieves only the rows where there are matching values in both tables.  
+- **Cross Join:** Produces a Cartesian product of two tables by combining every row of one table with every row of the other.  
+- **Left Join:** Returns all rows from the left table and matched rows from the right table (with NULLs for non-matches).
 
-### Task 5: Model Building & Training 🚀
-- **Objective:** Develop predictive models using machine learning algorithms.
-- **Steps:**  
-  - Feature selection and engineering.
-  - Training multiple models (e.g., decision trees, regression, SVM).
-- **Outcome:** Identification and selection of the most promising models for the task.
+Each join is explained with syntax examples and real-world scenarios, reinforcing practical knowledge of data retrieval.
 
-### Task 6: Model Evaluation & Tuning ⚖️
-- **Objective:** Assess and optimize model performance with robust evaluation metrics.
-- **Metrics & Techniques:**  
-  - Performance metrics such as accuracy, precision, recall, and F1-score.
-  - Cross-validation and hyperparameter tuning to refine the models.
-- **Outcome:** Optimized models with validated results, primed for deployment.
+## Day 4: Database Design & Practical SQL Tasks 🛠
 
-## Deployment & Results 📊
+### Task 1: SQL Essay on Retail Database Design 📝
+For this task, I wrote a detailed 500-word essay describing the process for designing a database for a small retail business. Key highlights include:
+- **Understanding Business Requirements:**  
+  - Identification of data elements like inventory, sales, and customer details.  
+  - Consideration of the needs of store managers, workers, and IT staff.
+- **Designing the Database Schema:**  
+  - Creating three tables: Products, Customers, and Sales.  
+  - Defining primary keys for uniqueness and foreign keys to establish relationships.
+- **Database Implementation:**  
+  - Using SQL commands such as `CREATE DATABASE`, `CREATE TABLE`, and specifying data types.  
+  - Providing code examples for table creation and enforcing relationships.
+- **Populating the Database:**  
+  - Demonstrating how to insert initial data with `INSERT INTO` statements.
+- **Maintaining the Database:**  
+  - Strategies for updating records, scheduling backups, and ensuring data quality with queries to detect duplicates or missing values.
+  
+This essay integrates theoretical knowledge with hands-on examples of SQL commands, illustrating a complete workflow from design to maintenance.
 
-### Task 7: Model Deployment & Monitoring 🌟
-- **Objective:** Deploy the final model and set up a monitoring system for ongoing performance evaluation.
-- **Process:**  
-  - Integration with APIs or web applications for real-time predictions.
-  - Establishing dashboards and alerting systems to monitor model drift.
-- **Outcome:** A fully deployed machine learning solution that continuously delivers insights and remains scalable.
+### Task 2: SQL Practical Exercises 🎯
+This section consists of multiple SQL exercises based on real-world scenarios, including:
+- **Demographics and Geography:**  
+  - Count the number of cities in the USA, list cities starting with specific prefixes, and sort cities alphabetically.
+- **Health and Economic Analyses:**  
+  - Identify the country with the highest life expectancy and the country with the largest population.
+- **Population and Data Analysis:**  
+  - Retrieve cities with populations above a given threshold or within a specific range.
+- **Data Reporting:**  
+  - Display limited sets of rows and perform city name frequency analysis.
+- **Comparative Insights:**  
+  - Determine the most and least populated cities, and compare capital city populations.
 
-## Project Notes & Resources 📝
+Each exercise includes both SQL syntax examples and sample output screenshots to illustrate the query outcomes.
 
-- **Detailed Documentation:**  
-  - Regularly updated project notes and supplementary guides.
-  - A log of insights, challenges, and iterative improvements.
-- **Resources:**  
-  - Links to academic papers, tutorials, and external references.
-  - Code snippets and configuration details for reproducibility.
+## Course Notes & Additional Resources 📖
+- **Comprehensive Course Notes:** Detailed outlines and revision guides summarizing key SQL concepts and exercises.  
+- **Supplementary Materials:** Additional links and references recommended in the revision guide for further learning.  
+- **Practice Screenshots:** Visual documentation of query execution and results for in-depth review.
 
 ---
 
-This README offers a comprehensive overview of my machine learning journey, with in-depth explanations enriched by engaging visuals and emojis. Customize each section to reflect your project's unique elements, and enjoy sharing your work in an appealing format! 😊
+This README offers a detailed and visually engaging overview of my SQL workbook. It bridges theoretical concepts with hands-on SQL tasks—from database fundamentals and join techniques to real-world query scenarios—providing a solid foundation in SQL for data management. Enjoy exploring the work! 🚀
